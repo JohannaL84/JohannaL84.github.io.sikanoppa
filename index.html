@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppapeli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Sikanoppapeli</h1>
+        
+        <div id="setup">
+            <div>
+                <p>Pelaajien määrä</p>
+                <label for="players"></label>
+                <input type="number" id="players" min="2" max="5" placeholder="2-5" required>
+            </div>
+            
+            <p>Noppien määrä</p>
+            <div>
+                <select id="diceCount">
+                    <option value="1">1 noppa</option>
+                    <option value="2">2 noppaa</option>
+                </select>
+            </div>
+        
+            <button onclick="startGame()">Aloita</button>
+           
+        </div>
+
+        <div id="game" style="display: none;">
+            <h2>Pelaajat</h2>
+                <div id="playerList"></div>
+            <h2 id="currentPlayer"></h2>
+
+            <p id="gameScore"></p>
+                <button onclick="rollDice()">Heitä</button>
+                <button onclick="hold()">Pidä</button>
+            <p id="diceResult"></p>
+
+                <img id="pig" src="IMG/possunoppa.png"> 
+            <br><br>
+        
+            <button id="resetButton" onclick="resetGame()">Aloita alusta</button>
+        
+            <script src="script.js"></script>
+        </div>
+    </div>
